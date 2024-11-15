@@ -3,6 +3,8 @@ import officeSpace from "../../assets/shutterstock_696636415.jpg";
 import Spacer from "../../components/Spacer";
 import { LoremIpsum } from "lorem-ipsum";
 import CustomButton from "../../components/CustomButton";
+import useMobile from "../../Styling/useMobile";
+import { Link } from "react-router-dom";
 
 const lorem = new LoremIpsum({
   sentencesPerParagraph: {
@@ -16,8 +18,17 @@ const lorem = new LoremIpsum({
 });
 
 const StripInfo = () => {
+  const isMobile = useMobile();
+
   return (
     <div className="stripInfo">
+      <div className="infoRight">
+        <img
+          src={officeSpace}
+          alt="Office Space"
+          className="officeSpaceStripInfo"
+        />
+      </div>
       <div className="infoLeft">
         <h1>{lorem.generateSentences(1)}</h1>
         <Spacer space={30} />
@@ -30,14 +41,13 @@ const StripInfo = () => {
           <li>{lorem.generateSentences(1)}</li>
         </ul>
         <Spacer space={30} />
-        <CustomButton text="Learn more" type={"blue"} />
-      </div>
-      <div className="infoRight">
-        <img
-          src={officeSpace}
-          alt="Office Space"
-          className="officeSpaceStripInfo"
-        />
+        <Link to="/about-us">
+          <CustomButton
+            text="Learn more"
+            type={"blue"}
+            width={isMobile ? "full" : ""}
+          />
+        </Link>
       </div>
     </div>
   );

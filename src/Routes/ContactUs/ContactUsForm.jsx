@@ -37,8 +37,6 @@ const ContactUsForm = ({ completeForm }) => {
       }
     }
 
-    console.log("No errors, building body now");
-
     const requestBody = {
       FullName: form["Full name"].value,
       EmailAddress: form["Email address"].value,
@@ -57,12 +55,7 @@ const ContactUsForm = ({ completeForm }) => {
       },
     };
 
-    console.log("Request body", requestBody);
-
     const response = await submitContactUsForm(requestBody);
-
-    console.log("Form submitted response", response);
-    console.log("Form submitted status:", response.status);
 
     const errorMessages = {
       Required: "Need to supply a value",

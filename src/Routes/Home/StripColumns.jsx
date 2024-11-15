@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./StripColumns.scss";
 import { LoremIpsum } from "lorem-ipsum";
 import CustomButton from "../../components/CustomButton";
+import useMobile from "../../Styling/useMobile";
 
 const smallLorem = new LoremIpsum({
   sentencesPerParagraph: {
@@ -26,6 +27,8 @@ const largeLorem = new LoremIpsum({
 });
 
 const StripColumns = () => {
+  const isMobile = useMobile();
+
   return (
     <div className="stripColumns">
       <h1>{largeLorem.generateSentences(1)}</h1>
@@ -39,8 +42,13 @@ const StripColumns = () => {
         <br />
         <p>{largeLorem.generateParagraphs(1)}</p>
       </div>
-      <Link to={"/contact-us"}>
-        <CustomButton text={"Contact us"} type={"blue"} />
+
+      <Link to="/contact-us" className="stripButtonWrapper">
+        <CustomButton
+          text={"Contact us"}
+          type={"blue"}
+          width={isMobile ? "full" : ""}
+        />
       </Link>
     </div>
   );

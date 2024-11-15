@@ -3,6 +3,11 @@
 .AboutUs {
   padding-left: $desktop-padding;
   padding-right: $desktop-padding;
+
+  @include respond-to-mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 .officeSpace {
@@ -14,6 +19,10 @@
 .officeSpaceImg {
   width: 55%;
   border-radius: 5px;
+
+  @include respond-to-mobile {
+    width: 100%;
+  }
 }
 
 .list {

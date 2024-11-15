@@ -6,11 +6,13 @@ import { useEffect, useState } from "react";
 import useAPI from "../../Context/ApiContext";
 import { Link } from "react-router-dom";
 import CustomButton from "../../components/CustomButton";
+import useMobile from "../../Styling/useMobile";
 
 lineSpinner.register();
 
 const StripCarousel = () => {
   const { getCarousel } = useAPI();
+  const isMobile = useMobile();
 
   useEffect(() => {
     // Timeout added to show loading spinner if internet is slow
@@ -64,9 +66,15 @@ const StripCarousel = () => {
               <div className="slideOverlay">
                 <div className="slideTitle">{slide.Title}</div>
                 <div className="slideSubtitle">{slide.Subtitle}</div>
-                <Link to="/contact-us" className="slideButton">
-                  <CustomButton text={"Contact us"} type={"blue"} />
-                </Link>
+                <div>
+                  <Link to="/contact-us" className="slideButton">
+                    <CustomButton
+                      text={"Contact us"}
+                      type={"blue"}
+                      width={isMobile ? "full" : ""}
+                    />
+                  </Link>
+                </div>
               </div>
             </div>
           </SwiperSlide>

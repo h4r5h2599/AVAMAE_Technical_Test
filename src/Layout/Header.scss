@@ -18,6 +18,8 @@
   @include respond-to-mobile {
     padding-left: $mobile-padding;
     padding-right: $mobile-padding;
+
+    justify-content: center;
   }
 }
 
@@ -26,6 +28,10 @@
   flex-direction: row;
   align-items: center;
   gap: 45px;
+
+  @include respond-to-mobile {
+    display: none;
+  }
 }
 
 .headerRoute {

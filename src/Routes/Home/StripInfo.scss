@@ -7,17 +7,30 @@
   padding-right: $desktop-padding;
 
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
+
+  @include respond-to-mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+
+    flex-direction: column;
+  }
 }
 
 .infoLeft {
   width: 45%;
+  @include respond-to-mobile {
+    width: 100%;
+  }
 }
 
 .infoRight {
   width: 45%;
+  @include respond-to-mobile {
+    width: 100%;
+  }
 }
 
 .officeSpaceStripInfo {

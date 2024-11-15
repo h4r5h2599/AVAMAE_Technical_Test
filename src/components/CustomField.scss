@@ -6,14 +6,23 @@
 
 .CFQuarter {
   width: 25%;
+  @include respond-to-mobile {
+    width: 50%;
+  }
 }
 
 .CFHalf {
   width: 50%;
+  @include respond-to-mobile {
+    width: 100%;
+  }
 }
 
 .CFFull {
   width: 100%;
+  @include respond-to-mobile {
+    width: 100%;
+  }
 }
 
 .CF {

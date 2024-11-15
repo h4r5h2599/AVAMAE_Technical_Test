@@ -21,7 +21,9 @@ const Header = () => {
 
   return (
     <div className="header">
-      <Logo height={30} />
+      <Link to="/">
+        <Logo height={30} />
+      </Link>
 
       <div className="headerRoutes">
         {routes.map((route) => {

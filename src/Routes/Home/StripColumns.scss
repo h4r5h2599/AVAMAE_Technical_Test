@@ -10,10 +10,27 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
+
+  @include respond-to-mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 .stripColumnsCols {
   columns: 3;
   column-gap: 40px;
   line-height: 1.6;
+
+  @include respond-to-mobile {
+    columns: 1;
+  }
+}
+
+.stripButtonWrapper {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
 }

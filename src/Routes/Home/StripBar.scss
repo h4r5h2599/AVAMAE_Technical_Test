@@ -12,6 +12,13 @@
   inset: 0;
   width: 100%;
   top: -80px;
+
+  @include respond-to-mobile {
+    height: 100%;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 .stripBarContent {
@@ -24,6 +31,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+
+  @include respond-to-mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
 }
 
 .stripBarContentBg {
@@ -37,6 +49,10 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+
+  @include respond-to-mobile {
+    width: 100%;
+  }
 }
 
 .stripBarText {
