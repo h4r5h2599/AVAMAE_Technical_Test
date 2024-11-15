@@ -17,7 +17,7 @@ const StripCarousel = () => {
     setTimeout(async () => {
       const data = await getCarousel();
 
-      if (data.status < 200 && data.status > 299) {
+      if (data.status < 200 || data.status > 299) {
         setDataError(true);
         return;
       }

@@ -38,7 +38,7 @@ export const useContactFormStore = create((set, get) => ({
       type: "fieldGroup",
       fieldName: "Phone Number",
       hidden: false,
-      fields: [structuredClone(phoneNumberField)],
+      fields: [],
     },
     "Add new phone number": {
       type: "button",
@@ -250,9 +250,16 @@ export const useContactFormStore = create((set, get) => ({
 
       newForm["Add address details"].active = false;
       newForm["Address Block"].hidden = true;
-      newForm["Phone Numbers"].fields = [structuredClone(phoneNumberField)];
+      newForm["Phone Numbers"].fields = [];
 
       return newForm;
+    });
+  },
+  setForm: (newForm) => {
+    set((state) => {
+      return {
+        form: newForm,
+      };
     });
   },
 }));

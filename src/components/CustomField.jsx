@@ -27,7 +27,6 @@ const CustomField = ({
           </div>
           <div className="CFBonusInfo">{bonusInfo}</div>
         </div>
-        <div className="CFErrorRow">{error}</div>
         {block ? (
           <textarea
             className={`CFInput CFBlock ${error ? "CFFieldError" : ""}`}
@@ -45,6 +44,7 @@ const CustomField = ({
             }}
           />
         )}
+        <div className="CFErrorRow">{error}</div>
       </div>
     </div>
   );
