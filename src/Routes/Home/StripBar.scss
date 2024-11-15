@@ -1,0 +1,44 @@
+@import "../../Styling/variables";
+
+.stripBar {
+  width: 100%;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+}
+
+.stripBarBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  top: -80px;
+}
+
+.stripBarContent {
+  position: absolute;
+  inset: 0;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.stripBarContentBg {
+  width: 45%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  padding: 40px;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.stripBarText {
+  color: $light-text;
+}

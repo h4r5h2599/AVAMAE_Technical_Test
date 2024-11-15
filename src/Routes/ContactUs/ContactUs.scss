@@ -1,0 +1,26 @@
+@import "../../Styling/variables";
+
+.contactUs {
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.contactUsFormSection {
+  width: 45%;
+}
+
+.contactUsLogo {
+  width: 45%;
+  position: relative;
+}
+
+.contactUsLogoImg {
+  width: 100%;
+  position: absolute;
+  inset: 0;
+  top: -55px;
+}

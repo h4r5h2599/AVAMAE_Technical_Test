@@ -1,0 +1,32 @@
+$mobile-padding: 10px;
+$desktop-padding: 270px;
+
+$breakpoint-mobile: 768px;
+
+$gray: #ececec;
+$dark-gray: #adadad;
+$dark-blue: #2f7ab8;
+$light-blue: #eff7ff;
+$dark-text: #000;
+$light-text: #fff;
+$hyper-text: #6994c4;
+$background: #ffffff;
+$field-bg: #f7f9fd;
+$field-border: #e6e6e6;
+$confirm-green: #e8f5db;
+$tick: #8dc83c;
+
+@mixin respond-to-mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+.text-base {
+  font-size: 0.9em;
+}
+
+.test-base {
+  font-size: 3em;
+  color: red;
+}

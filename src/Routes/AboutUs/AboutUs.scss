@@ -1,0 +1,29 @@
+@import "../../Styling/variables";
+
+.AboutUs {
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+}
+
+.officeSpace {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.officeSpaceImg {
+  width: 55%;
+  border-radius: 5px;
+}
+
+.list {
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.list li {
+  @extend .text-base;
+  font-weight: bold;
+}

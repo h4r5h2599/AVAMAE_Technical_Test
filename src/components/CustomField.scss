@@ -1,0 +1,71 @@
+@import "../Styling/variables";
+
+.CFBox {
+  padding-right: 30px;
+}
+
+.CFQuarter {
+  width: 25%;
+}
+
+.CFHalf {
+  width: 50%;
+}
+
+.CFFull {
+  width: 100%;
+}
+
+.CF {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.CFTitleRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  line-height: 1;
+}
+
+.CFTitle {
+  font-size: 0.9em;
+  color: $dark-text;
+}
+
+.CFOptional {
+  font-size: 0.8em;
+  color: $dark-gray;
+  font-style: italic;
+}
+
+.CFBonusInfo {
+  font-size: 0.8em;
+  color: $dark-gray;
+}
+
+.CFErrorRow {
+  color: red;
+  font-size: 0.8em;
+  height: 15px;
+}
+
+.CFInput {
+  width: 100%;
+  background-color: $field-bg;
+  border: 2px solid $field-border;
+  border-radius: 5px;
+  padding: 10px;
+  height: 50px;
+}
+
+.CFBlock {
+  height: 150px;
+}
+
+.CFFieldError {
+  border: 2px solid red;
+}

@@ -1,0 +1,26 @@
+@import "../../Styling/variables";
+
+.stripInfo {
+  width: 100%;
+  padding: 70px;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infoLeft {
+  width: 45%;
+}
+
+.infoRight {
+  width: 45%;
+}
+
+.officeSpaceStripInfo {
+  width: 100%;
+  border-radius: 5px;
+}

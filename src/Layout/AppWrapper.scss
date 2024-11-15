@@ -1,0 +1,15 @@
+@import "../Styling/variables";
+
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+
+  background-color: $background;
+}
+
+.page {
+  flex: 1;
+  overflow: hidden;
+}

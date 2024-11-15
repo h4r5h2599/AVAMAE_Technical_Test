@@ -1,0 +1,32 @@
+@import "../Styling/variables";
+
+.footer {
+  width: 100%;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  z-index: 100;
+  background-color: $background;
+
+  @include respond-to-mobile {
+    padding-left: $mobile-padding;
+    padding-right: $mobile-padding;
+  }
+}
+
+.footerHolder {
+  @extend .text-base;
+
+  border-top: 2px solid $gray;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  color: $dark-gray;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+
+  gap: 5px;
+}

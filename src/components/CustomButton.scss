@@ -1,0 +1,53 @@
+@import "../Styling/variables";
+
+.customButton {
+  @extend .text-base;
+  background-color: $light-blue;
+  color: $dark-blue;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+
+  outline: none;
+  border: none;
+
+  text-align: center;
+
+  position: relative;
+}
+
+.customMaxWidth {
+  width: 100%;
+}
+
+.custom150Width {
+  width: 150px;
+}
+
+.customBlue {
+  background-color: $dark-blue;
+  color: $light-text;
+}
+
+.customLight {
+  background-color: $light-blue;
+  color: $dark-blue;
+}
+
+.customWhite {
+  background-color: $light-text;
+  color: $dark-blue;
+}
+
+.CBIcon {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

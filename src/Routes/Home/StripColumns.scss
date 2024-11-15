@@ -1,0 +1,19 @@
+@import "../../Styling/variables";
+
+.stripColumns {
+  width: 100%;
+  padding: 70px;
+  padding-left: $desktop-padding;
+  padding-right: $desktop-padding;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.stripColumnsCols {
+  columns: 3;
+  column-gap: 40px;
+  line-height: 1.6;
+}
